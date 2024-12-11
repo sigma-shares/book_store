@@ -1,11 +1,12 @@
-import { IconButton, Text, Dialog } from "@radix-ui/themes";
-import logo from "./../shared/assets/icons/logo.svg";
-import location from "./../shared/assets/icons/location.svg";
-import cart from "./../shared/assets/icons/cart.svg";
-import search from "./../shared/assets/icons/search.svg";
-import wishlist from "./../shared/assets/icons/wishlist.svg";
-import userProfile from "./../shared/assets/icons/userProfile.svg";
+import { IconButton, Text, Dialog, Link } from "@radix-ui/themes";
+import logo from "../../../shared/assets/icons/logo.svg";
+import location from "../../../shared/assets/icons/location.svg";
+import search from "../../../shared/assets/icons/search.svg";
 import styled from "styled-components";
+import {
+  CONTENT_HEADER_NAVIGATION,
+  CONTENT_HEADER_NAVIGATION_SVG,
+} from "../../../shared/consts/contentHeaderNavigation";
 
 const Wrapper = styled.header`
   background-color: #ffffff;
@@ -49,10 +50,23 @@ const SearchInput = styled.input`
   width: 95%;
 `;
 
-// const StyledDialogContent = styled(Dialog.Content)`
-// `
+const renderIconButton = (arr: string[], arrSvg: string[]) => {
+  return (
+    <>
+      {arr.map((str: string, index: number) => {
+        return (
+          <IconButton variant="ghost" key={index}>
+            <Link href={"/" + str}>
+              <img src={arrSvg[index]} className={str} alt={str} />
+            </Link>
+          </IconButton>
+        );
+      })}
+    </>
+  );
+};
 
-export default function Header() {
+export function Header() {
   return (
     <Wrapper>
       <LocationWrapper>
@@ -72,25 +86,10 @@ export default function Header() {
               <SearchInput type="text" placeholder="Search here" />
             </Dialog.Content>
           </Dialog.Root>
-          <IconButton variant="ghost">
-            <a href="/userProfile">
-              <img
-                src={userProfile}
-                className="userProfile"
-                alt="userProfile"
-              />
-            </a>
-          </IconButton>
-          <IconButton variant="ghost">
-            <a href="/wishList">
-              <img src={wishlist} className="wishlist" alt="wishlist" />
-            </a>
-          </IconButton>
-          <IconButton variant="ghost">
-            <a href="/cart">
-              <img src={cart} className="cart" alt="cart" />
-            </a>
-          </IconButton>
+          {renderIconButton(
+            CONTENT_HEADER_NAVIGATION,
+            CONTENT_HEADER_NAVIGATION_SVG,
+          )}
         </ButtonsWrapper>
       </MenuWrapper>
     </Wrapper>

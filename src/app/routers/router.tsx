@@ -6,6 +6,9 @@ import UserProfile from "../../pages/UserProfile";
 import WishList from "../../pages/WishList";
 import Cart from "../../pages/Cart";
 import Search from "../Search";
+import Events from "../../pages/Events";
+import About from "../../pages/About";
+import Blog from "../../pages/Blog";
 
 export const router = createBrowserRouter([
   {
@@ -35,5 +38,17 @@ export const router = createBrowserRouter([
   {
     path: "/search",
     element: <Search />,
+  },
+  {
+    path: "/events",
+    element: <Events />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "/blog",
+    element: <Blog />,
   },
 ]);
