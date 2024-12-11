@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Text, Link } from "@radix-ui/themes";
+import { CONTENT_NAVIGATION, NAVIGATION_URL } from "../shared/consts/index";
 
 const MenuWrapper = styled.nav`
   display: flex;
@@ -27,18 +28,13 @@ const StyledButton = styled(Text)`
 export default function Navigation() {
   return (
     <MenuWrapper>
-      <StyledButton>
-        <Link href="/catalog">Книги</Link>
-      </StyledButton>
-      <StyledButton>
-        <Link href="/events">Курсы и мероприятия</Link>
-      </StyledButton>
-      <StyledButton>
-        <Link href="/about">Издательство</Link>
-      </StyledButton>
-      <StyledButton>
-        <Link href="/Blog">Блог</Link>
-      </StyledButton>
+      {CONTENT_NAVIGATION.map((str: string, index: number) => {
+        return (
+          <StyledButton key={index}>
+            <Link href={NAVIGATION_URL[index]}>{str}</Link>
+          </StyledButton>
+        );
+      })}
     </MenuWrapper>
   );
 }

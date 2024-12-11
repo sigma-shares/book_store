@@ -8,3 +8,4 @@ export {
   CONTENT_HEADER_NAVIGATION,
   CONTENT_HEADER_NAVIGATION_SVG,
 } from "./contentHeaderNavigation";
+export { CONTENT_NAVIGATION, NAVIGATION_URL } from "./contentNavigation";
