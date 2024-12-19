@@ -1,5 +1,4 @@
 import { IconButton, Text, Dialog, Link } from "@radix-ui/themes";
-import logo from "../../../shared/assets/icons/logo.svg";
 import location from "../../../shared/assets/icons/location.svg";
 import search from "../../../shared/assets/icons/search.svg";
 import styled from "styled-components";
@@ -73,7 +72,7 @@ export function Header() {
         <img src={location} className="location" alt="location" />
         <Text size="4">Location</Text>
       </LocationWrapper>
-      <img src={logo} className="logo" alt="logo" />
+      <Link href="/" underline="none" style={{ cursor: "pointer" }}><Text weight="bold" align="center" color="gray" size="8">BookStore</Text></Link>
       <MenuWrapper>
         <ButtonsWrapper>
           <Dialog.Root>

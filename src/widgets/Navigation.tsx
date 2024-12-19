@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Text, Link } from "@radix-ui/themes";
-import { CONTENT_NAVIGATION, NAVIGATION_URL } from "../shared/consts/index";
+import { GENRES } from "../shared/consts/index";
 
 const MenuWrapper = styled.nav`
   display: flex;
@@ -11,7 +11,7 @@ const MenuWrapper = styled.nav`
 
 const StyledButton = styled(Text)`
   margin: 16px;
-  font-size: 24px;
+  font-size: 16px;
   font-family: Circe, sans-serif;
 
   & a {
@@ -28,10 +28,10 @@ const StyledButton = styled(Text)`
 export default function Navigation() {
   return (
     <MenuWrapper>
-      {CONTENT_NAVIGATION.map((str: string, index: number) => {
+      {GENRES.map((str: string, index: number) => {
         return (
           <StyledButton key={index}>
-            <Link href={NAVIGATION_URL[index]}>{str}</Link>
+            <Link href="/">{str}</Link>
           </StyledButton>
         );
       })}

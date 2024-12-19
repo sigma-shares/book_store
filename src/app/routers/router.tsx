@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Book from "../../pages/Book";
 import Home from "../../pages/Home";
-import Catalog from "../../pages/Catalog";
+import { Catalog } from "../../pages/Catalog/ui/Catalog";
 import UserProfile from "../../pages/UserProfile";
 import WishList from "../../pages/WishList";
 import Cart from "../../pages/Cart";

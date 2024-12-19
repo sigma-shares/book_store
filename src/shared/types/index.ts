@@ -1,1 +1,2 @@
-export { type IFooterNavTypes } from "./footerNavTypes";
+export { type IFooterNavTypes } from "./IFooterNavTypes";
+export { type IBook } from "./IBook";

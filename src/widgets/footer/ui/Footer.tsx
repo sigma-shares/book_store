@@ -1,11 +1,9 @@
 import styled from "styled-components";
 import { Text, Link, Button, IconButton } from "@radix-ui/themes";
-import logo from "../../../shared/assets/icons/logo.svg";
 import {
   CONTENT_FOOTER_NAVIGATION,
   CONTENT_FOOTER_SOCIALS,
   CONTENT_FOOTER_PAYMENTS,
-  CONTENT_FOOTER_CONTACTS,
 } from "../../../shared/consts/index";
 import { IFooterNavTypes } from "../../../shared/types/index";
 
@@ -54,10 +52,6 @@ const FooterLine = styled.div`
   margin: 20px 0;
 `;
 
-const renderText = (text: string) => {
-  return <Text style={{ whiteSpace: "pre-line" }}>{text}</Text>;
-};
-
 const renderColumn = (obj: IFooterNavTypes) => {
   return (
     <ColumnWrapper $column>
@@ -95,22 +89,12 @@ export function Footer() {
     <FooterWrapper>
       <FooterLine />
       <Wrapper>
-        <ColumnWrapper $column>
-          <img src={logo} className="logo" alt="logo" />
-          <br />
-          <br />
-          <Text size="5">8 800 775-67-41</Text>
-          {renderText(CONTENT_FOOTER_CONTACTS[0])}
-          <br />
-          {renderText(CONTENT_FOOTER_CONTACTS[1])}
-        </ColumnWrapper>
         {CONTENT_FOOTER_NAVIGATION.map((obj: any) => {
           return renderColumn(obj);
         })}
       </Wrapper>
       <FooterLine />
       <Wrapper>
-        <ColumnWrapper>{renderText(CONTENT_FOOTER_CONTACTS[2])}</ColumnWrapper>
         {renderSocials(CONTENT_FOOTER_SOCIALS)}
         {renderSocials(CONTENT_FOOTER_PAYMENTS)}
         <Button color="gray" radius="large" size="4" variant="outline">

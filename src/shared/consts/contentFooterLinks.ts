@@ -41,8 +41,3 @@ export const CONTENT_FOOTER_SOCIALS: string[] = [
   classmates,
 ];
 export const CONTENT_FOOTER_PAYMENTS: string[] = [mastercard, visa, mir, sbp];
-export const CONTENT_FOOTER_CONTACTS: string[] = [
-  "Бесплатно по России\nс 9 до 20 по будням\nс 10 до 19 - в выходные",
-  "support@m-i-f.ru - \n служба поддержки",
-  "© 2000 - 2004\nИздательство МИФ",
-];

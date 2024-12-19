@@ -2,10 +2,10 @@ export {
   CONTENT_FOOTER_NAVIGATION,
   CONTENT_FOOTER_SOCIALS,
   CONTENT_FOOTER_PAYMENTS,
-  CONTENT_FOOTER_CONTACTS,
 } from "./contentFooterLinks";
 export {
   CONTENT_HEADER_NAVIGATION,
   CONTENT_HEADER_NAVIGATION_SVG,
 } from "./contentHeaderNavigation";
-export { CONTENT_NAVIGATION, NAVIGATION_URL } from "./contentNavigation";
+export { GENRES, QUANTITY_OF_BOOKS } from "./catalogGenres";
+export { BOOKS } from "./books";

@@ -1,5 +1,7 @@
+import { Catalog } from "./Catalog";
+
 function Home() {
-  return <div>Home Component</div>;
+  return <Catalog />;
 }
 
 export default Home;
